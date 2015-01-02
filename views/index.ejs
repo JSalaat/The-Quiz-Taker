@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title><%= mytitle %></title>
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/signIn.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">
+          <b>The Quiz Taker</b>
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About Us</a></li>
+          <li><a href="/">Sign In</a></li>
+          <li><a href="/"></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </head>
+
+
+  <body>
+
+<div class="container">
+  <div class="col-md-3"></div>
+  <div class="form-group jumbotron col-md-6" style="margin-top: 15%;">
+
+    <div class="form-horizontal">
+      <span class="text-primary" style="font-size: x-large;">Sign In</span>
+
+      <br>
+
+      <label for="inputusername" class="control-label">Username</label>
+      <div>
+      <input type="text" name="username" class="form-control" id="inputusername" placeholder="Username" required>
+      </div>
+
+
+      <label for="inputPassword" class="control-label">Password</label>
+      <div>
+      <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password" required>
+        </div>
+      <br>
+      <div>
+        <button type="submit" id="signIn" class="btn btn-primary pull-right">Sign In</button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>
+        <span>Don't Have an Account? </span><a href="/signUp">Sign Up</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  </body>
+</html>

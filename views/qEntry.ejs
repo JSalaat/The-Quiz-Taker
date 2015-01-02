@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Question Entry</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/qEntry.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">
+          <b>The Quiz Taker</b>
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About Us</a></li>
+          <li><a href="/">Sign In</a></li>
+          <li><a href="/"></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </head>
+
+  <body>
+  <div class="container">
+  <div class="col-md-2"></div>
+  <div class="form-group  col-md-8" style="margin-top: 15%;">
+
+    <div class="form">
+
+      <br>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="center-block" style="font-size: x-large">Create a Question</span></h3>
+        </div>
+        <div class="panel-body">
+
+          <div>
+            <span>Add the following Question to the Quiz -> <select id="toQuiz">
+
+              </select></span>
+          </div>
+          <br>
+
+
+          <span> Question : </span> <input id="ques" name="question" class="form-control" type="text" required>
+
+          <br>
+          <ol>
+            <li></li>
+             <input name="ans1" id="ans1" type="text" class="form-control" required>
+
+            <li></li>
+              <input name="ans2" id="ans2" type="text" class="form-control" required>
+
+            <li></li>
+             <input name="ans3" id="ans3" type="text" class="form-control" required>
+
+            <li></li>
+             <input name="ans4" id="ans4" type="text" class="form-control" required>
+
+          </ol>
+          <br>
+
+            <!-- <li> <div>Correct Answer
+                <input type="radio" name="correctans" class="form-control">
+                <input type="radio" name="correctans" class="form-control">
+                <input type="radio" name="correctans" class="form-control">
+                <input type="radio" name="correctans" class="form-control">
+              </div></li> -->
+
+
+          Correct Answer
+          <input name="correctans" id="cAns" type="text" class="form-control" required>
+          <br>
+
+
+          <button id="submit" class="btn btn-primary pull-right">Submit</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  </body>
+</html>

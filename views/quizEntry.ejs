@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Quiz</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/quizEntry.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">
+          <b>The Quiz Taker</b>
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About Us</a></li>
+          <li><a href="/">Sign In</a></li>
+          <li><a href="/"></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </head>
+  <body>
+
+<div class="container">
+  <div class="col-md-4"></div>
+  <div class="form-group jumbotron col-md-4" style="margin-top: 15%;">
+
+    <form class="form-horizontal">
+      <span class="center-block" style="font-size: x-large">New Quiz</span>
+      <br>
+
+      <label for="quizName" class="control-label">Quiz Name</label>
+      <div>
+      <input type="text" name="quizName" class="form-control" id="quizName" placeholder="Quiz Name" required>
+      </div>
+      <label for="quizDes" class="control-label">Quiz Description</label>
+      <div>
+      <input type="text" name="quizDes" class="form-control" id="quizDes" placeholder="Description" required>
+      </div>
+      <br>
+
+      <div>
+        <button type="submit" id="newQuiz" class="btn btn-primary pull-right">Enter Quiz</button>
+      </div>
+
+
+    </form>
+
+  </div>
+</div>
+  </body>
+</html>
