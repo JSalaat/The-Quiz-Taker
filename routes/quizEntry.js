@@ -55,12 +55,45 @@ exports.quizNames = function(req, res){
 
 
     quizDb.find(function (err, data) {
-        res.send({err: err, data: data});
+        //res.send({err: err, data: data});
+
+        res.render('showQuiz', {  data: data });
+       // res.render('data', {  data: data.data });
 
 
     });
 
 
     //res.send(username + " " + email + " " + password);
+
+};
+
+exports.startQuiz = function(req, res){
+
+
+    quizDb.find(function (err, data) {
+        //res.send({err: err, data: data});
+
+        res.render('startQuiz', {  data: data });
+       // res.render('data', {  data: data.data });
+
+
+    });
+
+
+};
+
+exports.quiz = function(req, res){
+
+
+    quizDb.find(function (err, data) {
+        //res.send({err: err, data: data});
+
+        res.render('quiz', {  data: data });
+       // res.render('data', {  data: data.data });
+
+
+    });
+
 
 };

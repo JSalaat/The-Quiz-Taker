@@ -9,6 +9,7 @@ var data = require('./routes/data');
 var user = require('./routes/user');
 var questions = require('./routes/question');
 var quizEntry = require('./routes/quizEntry');
+//var showQuiz = require('./routes/showQuiz');
 var http = require('http');
 var path = require('path');
 var app = express();
@@ -41,15 +42,27 @@ app.get('/signUp', function(req, res){
 
 app.post('/signUp', user.signUp);
 
+
+
+
 app.get('/quizEntry', function(req, res){
   res.render('quizEntry');
 });
 
+//app.get('/showQuiz', showQuiz.showQuiz);
+
 app.post('/quizEntry', quizEntry.newQuiz);
 
-app.get('/quiz', function(req, res){
+app.get('/showQuiz', quizEntry.quizNames);
+
+app.get('/startQuiz/:id', quizEntry.startQuiz);
+
+app.get('/quiz/:id', quizEntry.quiz);
+
+
+/*app.get('/quiz', function(req, res){
   res.render('quiz');
-});
+});*/
 
 app.get('/qEntry', function(req, res){
   res.render('qEntry');

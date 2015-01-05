@@ -1,31 +1,43 @@
 
 $(document).ready(function(){
 
-    sessionStorage.getItem('signedInUser');
-    console.log(sessionStorage);
+    var isSignedIn = sessionStorage.getItem('signedInUser');
 
+    if(isSignedIn == null){
 
-    $("#newQuiz").click(function(){
+        window.location.assign("/");
 
-        var quizname = $("#quizName").val();
-        var description = $("#quizDes").val();
-
-        //alert(quizname + " " + description);
-        var data = {
-            quizname : quizname,
-            description: description
-        };
+    }
+    else {
         $.ajax({
-            type:"POST",
-            url:"/quizEntry",
-            data:data
-        }).success(function(data, textstatus) {
-            console.log(data)
+            type: "GET",
+            url: "/getAllQuiz"
+        }).success(function (data, textstatus) {
 
-        }).error(function(err,textStatus){
-            console.log(err)
+
+        $("#newQuiz").click(function () {
+
+            var quizname = $("#quizName").val();
+            var description = $("#quizDes").val();
+
+            //alert(quizname + " " + description);
+            var data = {
+                quizname: quizname,
+                description: description
+            };
+            $.ajax({
+                type: "POST",
+                url: "/quizEntry",
+                data: data
+            }).success(function (data, textstatus) {
+                console.log(data)
+
+            }).error(function (err, textStatus) {
+                console.log(err)
+            })
         })
-    })
+    }
+        )}
 
 
 });

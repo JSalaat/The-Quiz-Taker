@@ -1,9 +1,15 @@
 
 $(document).ready(function(){
 
-    sessionStorage.getItem('signedInUser');
-    console.log(sessionStorage);
+    var isSignedIn = sessionStorage.getItem('signedInUser');
 
+    if(isSignedIn == null){
+
+        window.location.assign("/");
+
+    }
+
+    else {
 
     $("#submitAns").click(function(){
 
@@ -14,6 +20,8 @@ $(document).ready(function(){
         alert(ans);
 
 
-    })
+        })
+
+    }
 
 });

@@ -6,7 +6,7 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
 
     <script src="/javascripts/jquery.js"></script>
-    <script src="/javascripts/quizEntry.js"></script>
+    <script src="/javascripts/showQuiz.js"></script>
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="navbar-header">
@@ -37,32 +37,32 @@
 
 <div class="container">
   <div class="col-md-1"></div>
-
-
   <div class="form-group jumbotron col-md-10" style="margin-top: 15%;">
 
-    <form class="form-horizontal">
-      <span class="center-block" style="font-size: x-large">New Quiz</span>
+    <div class="form-horizontal">
+      <span style="font-size: x-large">Take a Quiz</span>
+      <br>
       <br>
 
-      <label for="quizName" class="control-label">Quiz Name</label>
-      <div>
-      <input type="text" name="quizName" class="form-control" id="quizName" placeholder="Quiz Name" required>
-      </div>
-      <label for="quizDes" class="control-label">Quiz Description</label>
-      <div>
-      <input type="text" name="quizDes" class="form-control" id="quizDes" placeholder="Description" required>
-      </div>
-      <br>
-
-      <div>
-        <button type="submit" id="newQuiz" class="btn btn-primary pull-right">Enter Quiz</button>
-      </div>
+      <div class="list-group" >
+        <% if (data.length) { %>
+        <ul>
+        <% data.forEach(function(a){ %>
+        <a class="list-group-item" onclick="sendId('<%= a._id%>')" value="<%= a._id%>"><%= a.quizName %></a>
+        <% }) %>
+        </ul>
+        <% } %>
 
 
-    </form>
+
+      </div>
+
+
+
+    </div>
 
   </div>
+
 </div>
   </body>
 </html>
