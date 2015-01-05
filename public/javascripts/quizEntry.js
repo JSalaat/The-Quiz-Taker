@@ -8,12 +8,12 @@ $(document).ready(function(){
         window.location.assign("/");
 
     }
-    else {
+    else {/*
         $.ajax({
             type: "GET",
             url: "/getAllQuiz"
         }).success(function (data, textstatus) {
-
+*/
 
         $("#newQuiz").click(function () {
 
@@ -35,8 +35,8 @@ $(document).ready(function(){
             }).error(function (err, textStatus) {
                 console.log(err)
             })
-        })
-    }
+        }
+
         )}
 
 

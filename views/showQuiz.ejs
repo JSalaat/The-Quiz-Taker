@@ -48,7 +48,7 @@
         <% if (data.length) { %>
         <ul>
         <% data.forEach(function(a){ %>
-        <a class="list-group-item" onclick="sendId('<%= a._id%>')" value="<%= a._id%>"><%= a.quizName %></a>
+        <a class="list-group-item" style="cursor: pointer" onclick="sendId('<%= a._id%>')"><%= a.quizName %></a>
         <% }) %>
         </ul>
         <% } %>

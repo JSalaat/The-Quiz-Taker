@@ -68,6 +68,24 @@ exports.quizNames = function(req, res){
 
 };
 
+
+exports.getQuizNames = function(req, res){
+
+
+    quizDb.find(function (err, data) {
+        res.send({err: err, data: data});
+
+        //res.render('showQuiz', {  data: data });
+        //res.render('data', {  data: data.data });
+
+
+    });
+
+
+    //res.send(username + " " + email + " " + password);
+
+};
+
 exports.startQuiz = function(req, res){
 
 

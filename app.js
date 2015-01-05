@@ -35,15 +35,11 @@ app.get('/', routes.index);
 
 app.post('/signIn', user.signIn);
 
-
 app.get('/signUp', function(req, res){
   res.render('signUp');
 });
 
 app.post('/signUp', user.signUp);
-
-
-
 
 app.get('/quizEntry', function(req, res){
   res.render('quizEntry');
@@ -59,7 +55,6 @@ app.get('/startQuiz/:id', quizEntry.startQuiz);
 
 app.get('/quiz/:id', quizEntry.quiz);
 
-
 /*app.get('/quiz', function(req, res){
   res.render('quiz');
 });*/
@@ -74,7 +69,7 @@ app.get('/test', function(req, res){
   res.send("alert..")
 });
 
-app.get('/getAllQuiz', quizEntry.quizNames);
+app.get('/getAllQuiz', quizEntry.getQuizNames);
 
 app.get('/no/:firstNo/:secondNo', routes.calculate);
 
