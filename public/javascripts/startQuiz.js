@@ -18,4 +18,5 @@ var isSignedIn = sessionStorage.getItem('signedInUser');
         function startQuiz() {
             window.location.assign("/quiz/"+str);
         }
+
     }

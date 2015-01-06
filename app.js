@@ -71,6 +71,8 @@ app.get('/test', function(req, res){
 
 app.get('/getAllQuiz', quizEntry.getQuizNames);
 
+app.post('/getAllQuestionsByID', questions.getAllQuestionsByID);
+
 app.get('/no/:firstNo/:secondNo', routes.calculate);
 
 
