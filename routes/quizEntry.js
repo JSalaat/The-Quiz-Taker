@@ -75,10 +75,6 @@ exports.getQuizNames = function(req, res){
     quizDb.find(function (err, data) {
         res.send({err: err, data: data});
 
-        //res.render('showQuiz', {  data: data });
-        //res.render('data', {  data: data.data });
-
-
     });
 
 

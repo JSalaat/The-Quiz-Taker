@@ -78,7 +78,4 @@ exports.getAllQuestionsByID = function(req, res){
 
     });
 
-
-    //res.send(username + " " + email + " " + password);
-
 };

@@ -9,7 +9,7 @@ var data = require('./routes/data');
 var user = require('./routes/user');
 var questions = require('./routes/question');
 var quizEntry = require('./routes/quizEntry');
-//var showQuiz = require('./routes/showQuiz');
+var results = require('./routes/results');
 var http = require('http');
 var path = require('path');
 var app = express();
@@ -55,6 +55,14 @@ app.get('/startQuiz/:id', quizEntry.startQuiz);
 
 app.get('/quiz/:id', quizEntry.quiz);
 
+app.get('/result', function(req, res){
+  res.render('result');
+});
+
+app.get('/dashboard', function(req, res){
+  res.render('dashBoard');
+});
+
 /*app.get('/quiz', function(req, res){
   res.render('quiz');
 });*/
@@ -65,11 +73,16 @@ app.get('/qEntry', function(req, res){
 
 app.post('/qEntry', questions.question);
 
+
+app.post('/saveResult', results.result);
+
 app.get('/test', function(req, res){
   res.send("alert..")
 });
 
 app.get('/getAllQuiz', quizEntry.getQuizNames);
+
+app.post('/getUserResults', results.getUserResults);
 
 app.post('/getAllQuestionsByID', questions.getAllQuestionsByID);
 
