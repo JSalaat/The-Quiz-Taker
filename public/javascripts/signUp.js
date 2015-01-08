@@ -3,12 +3,6 @@ $(document).ready(function(){
 
     var isSignedIn = sessionStorage.getItem('signedInUser');
 
-    if(isSignedIn == null){
-
-        window.location.assign("/");
-
-    }
-    else {
 
         $("#signUp").click(function () {
 
@@ -34,7 +28,7 @@ $(document).ready(function(){
 
 
         })
-    }
+
 
 });
 /*

@@ -71,12 +71,27 @@ $(document).ready(function(){
 
                     sessionStorage.setItem('result', JSON.stringify(userAnswers));
 
+                    var calculatedScore = 0;
+
+                    userAnswers.forEach(function(entry) {
+                        if(entry == true){
+                            calculatedScore++;
+                        }
+                    });
+
+                    var percentage = ((calculatedScore/userAnswers.length)*100);
+
+                    var int = parseInt(percentage);
+
+                    var roundPerc = Math.round(int);
+
+
                     var user = JSON.parse(sessionStorage.getItem('signedInUser'))[0];
 
                     var data = {
                         quizID: str,
                         userID: user._id,
-                        result: userAnswers
+                        result: roundPerc
                     };
 
                     $.ajax({

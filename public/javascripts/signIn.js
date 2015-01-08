@@ -30,7 +30,7 @@ $(document).ready(function(){
 
                     sessionStorage.setItem('signedInUser', JSON.stringify(data.data));
                     sessionStorage.getItem('signedInUser');
-                    window.location.assign("/quizEntry");
+                    window.location.assign("/showQuiz");
                 }
 
             }).error(function (err, textStatus) {
