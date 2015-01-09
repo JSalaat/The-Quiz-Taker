@@ -40,9 +40,9 @@
   <div class="form-group jumbotron col-md-6" style="margin-top: 15%;">
 
     <div class="form form-horizontal " >
-      <span class="text-primary" style="font-size: x-large">Create an Account</span>
+      <span class="text-primary" style="font-size: x-large" >Create an Account</span>
       <br>
-      <label for="name" class="control-label">Username</label>
+      <label for="name" class="control-label" id="form">Username</label>
 
       <input type="text" id="username" name="username" class="input-block-level name form-control" placeholder="Username.." required>
 
@@ -55,8 +55,11 @@
       <label for="password" class="control-label">Password</label>
 
       <input type="password" id="pass" name="password" class="input-block-level password form-control" placeholder="Password.." required>
+      </div>
       <br>
+    <label id="errMsg" class="control-label"></label>
 
+    <div>
       <button class="btn btn-large btn-primary pull-right" id="signUp">Create Your Account</button>
 
     </div>

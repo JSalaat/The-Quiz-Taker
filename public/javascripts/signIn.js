@@ -8,6 +8,7 @@ $(document).ready(function(){
 
         if(username == '' || password == ''){
             $("#form").addClass('has-error');
+            $('#errMsg').html('Username Or Password cannot be empty')
         }
         else {
 
@@ -23,6 +24,7 @@ $(document).ready(function(){
             }).success(function (data, textstatus) {
                 if(data.data == 0){
                     $("#form").addClass('has-error');
+                    $('#errMsg').html('Username Or Password not correct');
 
                 }
 
